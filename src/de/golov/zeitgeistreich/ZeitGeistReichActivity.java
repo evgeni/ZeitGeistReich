@@ -52,8 +52,8 @@ public class ZeitGeistReichActivity extends Activity {
 				Toast.makeText(ZeitGeistReichActivity.this, Error, Toast.LENGTH_SHORT).show();
 			} else {
 				Toast.makeText(ZeitGeistReichActivity.this, "Image uploaded.", Toast.LENGTH_SHORT).show();
-				finish();
 			}
+			finish();
 		}
 
 		protected Void doInBackground(ZeitGeistObject... files) {
