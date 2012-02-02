@@ -5,9 +5,24 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/TagEditText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello" />
+        android:text="@string/tag_edit_text" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/TagEditView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="" >
+
+        <requestFocus />
+    </MultiAutoCompleteTextView>
+
+    <Button
+        android:id="@+id/ZeitgeistSubmit"
+        android:text="@string/submit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
