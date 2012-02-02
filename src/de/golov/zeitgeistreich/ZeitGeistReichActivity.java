@@ -70,7 +70,7 @@ public class ZeitGeistReichActivity extends Activity {
 					StringBody tags = new StringBody(file.tags);
 					mpEntity.addPart("tags", tags);
 					httppost.setEntity(mpEntity);
-					HttpResponse response = httpclient.execute(httppost);
+					httpclient.execute(httppost);
 				} catch (Exception e) {
 					Error = e.toString();
 				}
