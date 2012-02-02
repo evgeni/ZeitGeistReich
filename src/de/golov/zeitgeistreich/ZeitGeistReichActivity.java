@@ -11,6 +11,7 @@ import android.provider.MediaStore.Images.ImageColumns;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.MultiAutoCompleteTextView;
 import android.widget.Toast;
 
@@ -104,6 +105,19 @@ public class ZeitGeistReichActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
+		final ImageView imagePreview = (ImageView) findViewById(R.id.ImagePreview);
+		Intent intent = getIntent();
+		Bundle extras = intent.getExtras();
+		Uri mImageUri = null;
+		if (Intent.ACTION_SEND.equals(intent.getAction()) && extras != null) {
+			if (extras.containsKey(Intent.EXTRA_STREAM)) {
+				mImageUri = (Uri) extras.getParcelable(Intent.EXTRA_STREAM);
+				if (mImageUri != null) {
+					imagePreview.setImageURI(mImageUri);
+				}
+			}
+		}
+		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_dropdown_item_1line, tag_suggests);
 		final MultiAutoCompleteTextView textView = (MultiAutoCompleteTextView) findViewById(R.id.TagEditView);
