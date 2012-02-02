@@ -22,9 +22,12 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.provider.MediaStore.Images.ImageColumns;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -130,7 +133,12 @@ public class ZeitGeistReichActivity extends Activity {
 			if (extras.containsKey(Intent.EXTRA_STREAM)) {
 				mImageUri = (Uri) extras.getParcelable(Intent.EXTRA_STREAM);
 				if (mImageUri != null) {
-					imagePreview.setImageURI(mImageUri);
+					int origId = Integer.parseInt(mImageUri.getLastPathSegment());
+					Bitmap bitmap = MediaStore.Images.Thumbnails.getThumbnail(
+							getContentResolver(), origId,
+							MediaStore.Images.Thumbnails.MINI_KIND,
+							(BitmapFactory.Options) null );
+					imagePreview.setImageBitmap(bitmap);
 				}
 			}
 		}
