@@ -81,7 +81,21 @@ public class ZeitGeistReichActivity extends Activity {
 	}
 
 	private String[] tag_suggests = new String[] {
-			"Belgium", "France", "Italy", "Germany", "Spain"
+			"comic", "screenshot", "animated", "wallpaper", "cat", "girl", "fail",
+			"explosm", "nerd", "facebook", "hardware", "minecraft", "cloth",
+			"motivational", "linux", "star trek", "nsfw", "politics", "apple",
+			"gay", "zensursula", "ani", "my little pony", "lol", "xkcd", "dope",
+			"cute", "game", "skyrim", "meme", "stasi2.0", "emma watson", "girls",
+			"video", "wtf", "piraten", "piratenpartei", "cover", "music",
+			"summerglau", "google+", "dance", "sexy", "star wars", "debian",
+			"android", "dog", "house", "obama", "steve", "emo", "epic", "picard",
+			"remix", "animation", "fdp", "food", "google", "jessor", "awesome",
+			"notebook", "penis", "berlin", "cdu", "felicia_day", "fun", "goth",
+			"iphone", "party", "trailer", "world", "anime", "ccc", "dnb", "dogs",
+			"geek", "lesbian", "microsoft", "youtube", "computer", "education",
+			"guitar", "pepper spray cop", "porn", "schischa", "water", "club-mate",
+			"drogen", "fire", "jesse", "jesse keys", "mac", "notch", "siyb",
+			"summer glau", "tattoo", "vim", "chuck", "fefe", "hacker"
 	};
 
 	/** Called when the activity is first created. */
