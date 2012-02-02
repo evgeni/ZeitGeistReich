@@ -21,8 +21,8 @@
 
     <Button
         android:id="@+id/ZeitgeistSubmit"
-        android:text="@string/submit"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/submit" />
 
 </LinearLayout>
